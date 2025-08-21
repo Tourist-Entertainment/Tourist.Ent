@@ -1,0 +1,271 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tourists.ent — Portfolio</title>
+  <meta name="description" content="Tourists.ent — photography, projects, and digital products by Khareef Archat." />
+  <style>
+    :root{
+      --bg:#f1f1ef;/*soft grey like the reference*/
+      --card:#ffffff;
+      --ink:#111216; /* near-black */
+      --muted:#6b6f76;
+      --accent:#0f172a; /* deep slate */
+      --accent-2:#7c3aed; /* subtle purple for focus */
+      --ring:rgba(17,18,22,0.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:var(--ink);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;background:var(--bgcc,rgba(241,241,239,0.7));backdrop-filter:saturate(180%) blur(14px);z-index:40;border-bottom:1px solid rgba(0,0,0,0.06)}
+    .nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.06em}
+    .brand-logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#111216, #2b2f36);display:grid;place-items:center;color:#fff;font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,0.18)}
+    .tabs{display:flex;gap:18px;flex-wrap:wrap}
+    .tab{padding:10px 14px;border-radius:12px;color:var(--muted)}
+    .tab[aria-current="page"], .tab:hover{background:#fff;color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+    .hero{padding:56px 0 18px}
+    .hero-card{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:stretch}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 30px var(--ring);overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+    .card.pad{padding:22px}
+    .h1{font-size:36px;line-height:1.1;margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(0,0,0,.1);background:#111216;color:#fff}
+    .btn.secondary{background:#fff;color:var(--ink)}
+    .grid{display:grid;gap:18px}
+    .grid.projects{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.products{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;background:#eef; color:#334;}
+    .thumb{aspect-ratio:16/10;background:#ddd;object-fit:cover}
+    .title{font-weight:700;margin:10px 0 6px}
+    .footer{margin:48px 0 80px;color:var(--muted)}
+    .section{padding:30px 0}
+    .section h2{margin:0 0 16px}
+    .stack{display:flex;flex-direction:column;gap:12px}
+    .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .field{display:flex;flex-direction:column;gap:6px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,0.12);background:#fff;box-shadow:0 1px 0 rgba(0,0,0,0.02)}
+    textarea{min-height:132px;resize:vertical}
+    .socials{display:flex;gap:14px;align-items:center}
+    .hidden{display:none}
+    .notice{padding:12px 16px;border-radius:12px;background:#fff1;}
+    @media (max-width:960px){
+      .hero-card{grid-template-columns:1fr}
+      .grid.projects,.grid.products{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:640px){
+      .grid.projects,.grid.products{grid-template-columns:1fr}
+      .h1{font-size:28px}
+      .nav .inner{padding:12px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="inner wrap">
+      <a class="brand" href="#home" data-link>
+        <span class="brand-logo">TE</span>
+        <span>Tourists.ent</span>
+      </a>
+      <nav class="tabs" aria-label="Primary">
+        <a class="tab" href="#projects" data-link>Projects</a>
+        <a class="tab" href="#products" data-link>Digital Products</a>
+        <a class="tab" href="#about" data-link>About</a>
+        <a class="tab" href="#contact" data-link>Contact</a>
+      </nav>
+    </div>
+  </header>  <!-- MAIN -->  <main class="wrap">
+    <!-- HERO / HOME -->
+    <section id="home" class="hero section">
+      <div class="hero-card">
+        <div class="card">
+          <img id="heroImg" class="thumb" alt="Hero cover" src="https://images.unsplash.com/photo-1517816428104-797678c7cf0d?q=80&w=1600&auto=format&fit=crop"/>
+        </div>
+        <div class="card pad stack">
+          <h1 class="h1">Ben‑inspired, but purely <span class="pill">Tourists.ent</span></h1>
+          <p class="muted">Photography, motion, and design by Khareef Archat. Clean, minimal layout with four simple sections you can edit without any external CMS.</p>
+          <div class="row">
+            <a href="#projects" class="btn" data-link>View Projects</a>
+            <a href="#products" class="btn secondary" data-link>Shop Digital</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- PROJECTS -->
+<section id="projects" class="section hidden">
+  <div class="row" style="justify-content:space-between;align-items:end">
+    <div>
+      <h2 style="margin:0">Projects</h2>
+      <p class="muted" style="margin-top:6px">Client & personal work. Edit by changing the JSON below in this file.</p>
+    </div>
+    <div class="row">
+      <label class="muted" for="projectFilter">Filter:</label>
+      <select id="projectFilter" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.12)"></select>
+    </div>
+  </div>
+  <div id="projectGrid" class="grid projects" style="margin-top:16px"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section hidden">
+  <h2 style="margin:0 0 6px">Digital Products</h2>
+  <p class="muted">LUTs, Lightroom presets, overlays. Use Stripe Checkout links or mailto until you're ready for full e‑commerce.</p>
+  <div id="productGrid" class="grid products" style="margin-top:16px"></div>
+  <div class="notice muted" style="margin-top:12px">Tip: To sell without a platform, create a <b>Stripe</b> account and paste each product's <i>Checkout link</i> in the data below. Or start with a <b>mailto</b> link that opens your email.</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section hidden">
+  <div class="card pad">
+    <h2>About</h2>
+    <p id="aboutText" class="muted"></p>
+    <div class="row socials" id="socialLinks"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section hidden">
+  <div class="card pad">
+    <h2>Contact</h2>
+    <p class="muted">For bookings, collaborations, or print/licensing inquiries, use the form. This sends an email via your mail client by default. For a hosted form later, we can wire it to a serverless function.</p>
+    <form id="contactForm" class="stack">
+      <div class="field"><label>Name<input name="name" required/></label></div>
+      <div class="field"><label>Email<input name="email" type="email" required/></label></div>
+      <div class="field"><label>Message<textarea name="message" required></textarea></label></div>
+      <button class="btn" type="submit">Send Email</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="row" style="justify-content:space-between">
+    <span class="muted">© <span id="year"></span> Tourists.ent — Built as a vanilla HTML starter.</span>
+    <div class="socials" id="footerSocials"></div>
+  </div>
+</footer>
+
+  </main>  <script>
+    // ========= EDIT ME (your content lives here) =========
+    const SITE = {
+      heroImage: 'https://images.unsplash.com/photo-1517816428104-797678c7cf0d?q=80&w=1600&auto=format&fit=crop',
+      about: `Khareef Archat is a Jamaican architectural student and photographer behind Tourists.ent.\nHe reframes everyday scenes into graphic, cinematic moments across the Caribbean and beyond.`,
+      email: 'tourists.ent@example.com',
+      socials: [
+        { label: 'Instagram', url: 'https://instagram.com/Tourists.ent' },
+        { label: 'TikTok', url: 'https://tiktok.com/@tour.ent' },
+        { label: 'YouTube', url: 'https://youtube.com/@touristsent' }
+      ],
+      projects: [
+        { title: 'Pompeii Square — Nassau', tag: 'City', cover: 'https://images.unsplash.com/photo-1520976035047-65f9e49a6d0b?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Street textures and midday light study.' },
+        { title: 'Providence Hyperlapse', tag: 'Motion', cover: 'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Fixed-frame flicker experiment with Solas.' },
+        { title: 'Bayroot Market study', tag: 'Architecture', cover: 'https://images.unsplash.com/photo-1523419409543-a35664b3bd02?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Urban market typology & coral reef metaphor.' },
+        { title: 'Shoreline Forms', tag: 'Landscape', cover: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Wind, water, and stone rhythms.' },
+        { title: 'Industrial Night', tag: 'City', cover: 'https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Blue-orange nocturne with long exposure.' },
+        { title: 'Quiet Facades', tag: 'Architecture', cover: 'https://images.unsplash.com/photo-1505843611924-61f7f6f6d49a?q=80&w=1600&auto=format&fit=crop', url: '#', blurb: 'Shading, voids, and circulation.' }
+      ],
+      products: [
+        { title: 'Complete LUT Pack', price: '£59', cover: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop', 
+          features: ['8 creative looks', 'Sony/Canon/Nikon conversions', 'Install guide + walkthrough'],
+          buy: 'mailto:tourists.ent@example.com?subject=Complete%20LUT%20Pack&body=Hi%20Khareef,%20I%27d%20like%20to%20purchase%20the%20Complete%20LUT%20Pack.' },
+        { title: 'Lightroom Preset Bundle', price: '$39', cover: 'https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop', 
+          features: ['Desktop + Mobile', 'Skin‑tone safe', '5 base profiles'],
+          buy: '#' },
+        { title: 'Overlay Pack — Film Dust', price: '$15', cover: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop',
+          features: ['PNG + ProRes MOV', 'Grain, burns, light leaks'],
+          buy: '#' }
+      ]
+    }
+    // ========= END EDIT AREA =========
+
+    // Basic hash router for tabs
+    const routes = ['home','projects','products','about','contact']
+    function setActive(hash){
+      const current = (hash||location.hash||'#home').replace('#','')
+      routes.forEach(id=>{
+        const el = document.getElementById(id)
+        if(!el) return
+        el.classList.toggle('hidden', id!==current)
+      })
+      document.querySelectorAll('.tab').forEach(a=>{
+        const is = a.getAttribute('href') === `#${current}`
+        a.setAttribute('aria-current', is ? 'page' : 'false')
+      })
+    }
+    window.addEventListener('hashchange', ()=> setActive())
+
+    // Populate hero/about/socials
+    document.getElementById('heroImg').src = SITE.heroImage
+    document.getElementById('aboutText').textContent = SITE.about
+    const socials = (where)=>{
+      const wrap = document.getElementById(where)
+      wrap.innerHTML = ''
+      SITE.socials.forEach(s=>{
+        const a = document.createElement('a'); a.href=s.url; a.target='_blank'; a.rel='noopener'; a.textContent=s.label; a.className='pill';
+        wrap.appendChild(a)
+      })
+    }
+    socials('socialLinks'); socials('footerSocials')
+
+    // Build project filter + grid
+    const projectGrid = document.getElementById('projectGrid')
+    const tags = ['All', ...new Set(SITE.projects.map(p=>p.tag))]
+    const sel = document.getElementById('projectFilter')
+    tags.forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; sel.appendChild(o) })
+    sel.addEventListener('change', ()=>renderProjects())
+
+    function renderProjects(){
+      const f = sel.value || 'All'
+      const list = SITE.projects.filter(p=> f==='All' || p.tag===f)
+      projectGrid.innerHTML = ''
+      list.forEach(p=>{
+        const item = document.createElement('article'); item.className='card'
+        item.innerHTML = `
+          <img class="thumb" alt="${p.title}" src="${p.cover}"/>
+          <div class="pad" style="padding:14px 16px 18px">
+            <div class="pill" style="background:#eef">${p.tag}</div>
+            <div class="title">${p.title}</div>
+            <p class="muted" style="margin:6px 0 12px">${p.blurb||''}</p>
+            <a class="btn secondary" ${p.url?'href="'+p.url+'" target="_blank"':''}>View</a>
+          </div>`
+        projectGrid.appendChild(item)
+      })
+    }
+
+    // Build products grid
+    function renderProducts(){
+      const grid = document.getElementById('productGrid')
+      grid.innerHTML=''
+      SITE.products.forEach(pr=>{
+        const el = document.createElement('article'); el.className='card'
+        const feats = (pr.features||[]).map(f=>`<li>${f}</li>`).join('')
+        el.innerHTML = `
+          <img class="thumb" alt="${pr.title}" src="${pr.cover}"/>
+          <div class="pad" style="padding:14px 16px 18px">
+            <div class="title">${pr.title}</div>
+            <div class="muted" style="margin-bottom:8px">${pr.price}</div>
+            <ul class="muted" style="padding-left:18px;margin:0 0 10px;line-height:1.5">${feats}</ul>
+            <a class="btn" href="${pr.buy}" target="_blank" rel="noopener">Buy</a>
+          </div>`
+        grid.appendChild(el)
+      })
+    }
+
+    // Contact form -> mailto
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      e.preventDefault()
+      const data = Object.fromEntries(new FormData(e.target))
+      const body = encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`)
+      location.href = `mailto:${SITE.email}?subject=Website%20Inquiry&body=${body}`
+    })
+
+    // Init
+    document.getElementById('year').textContent = new Date().getFullYear()
+    renderProjects(); renderProducts(); setActive('#home')
+  </script></body>
+</html>
